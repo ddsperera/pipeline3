@@ -10,7 +10,7 @@ node {
   }
   
   stage('Build image') {
-    app = docker.build("opencom/pipeline3")
+    app = docker.build("gipakos/pipeline3")
   }
   
   stage('Push image') {
