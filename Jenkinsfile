@@ -10,11 +10,11 @@ node {
   }
   
   stage('Build image') {
-    app = docker.build("gipakos/pipeline3")
+    app = docker.build("ddsperera/pipeline3")
   }
   
   stage('Push image') {
-    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+    docker.withRegistry('https://registry.hub.docker.com', 'Docker-Hub-Credentials') {
       app.push("latest")
     }
   }
